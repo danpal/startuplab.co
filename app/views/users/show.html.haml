@@ -1,0 +1,9 @@
+%h1 User
+%ul
+-keys = @user.attributes.keys[3..-1]
+- keys.each do |key|
+  %li
+    %span
+      %strong= "#{key.capitalize()}:"
+    %span= "#{@user[key]}"
+
