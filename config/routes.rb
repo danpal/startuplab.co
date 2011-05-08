@@ -4,9 +4,9 @@ StartuplabCo::Application.routes.draw do
 
 
   match '/contact_us', :to => 'pages#contact_us'
-  match '/help', :to => 'pages#help'
   match '/faq', :to => 'pages#faq'
   match '/index', :to => 'pages#index'
+  match '/about', :to => 'pages#about'
 
   #users
   resources :users
