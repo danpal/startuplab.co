@@ -3,7 +3,7 @@ class User
 
   field :provider, type: String
   field :uid, type: String
-  field :admin, type: Boolean
+  field :admin, type: Boolean, default: false
 
 
   def self.authenticate(fields)
@@ -33,3 +33,4 @@ class User
   end
 
 end
+

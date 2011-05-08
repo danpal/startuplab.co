@@ -1,7 +1,7 @@
 .display_container
   %h1 User
   %ul
-    -keys = @user.attributes.keys[3..-1]
+    -keys = @user.attributes.keys[4..-1]
     -keys.each do |key|
       %li.title= "#{key.capitalize()}"
       %p.value= "#{@user[key]}"

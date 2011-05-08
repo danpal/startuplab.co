@@ -1,22 +1,19 @@
 defaults: &defaults
   allow_dynamic_fields: true
-  
-  host: 127.0.0.1
-  # slaves:
-  #   - host: slave1.local
-  #     port: 27018
-  #   - host: slave2.local
-  #     port: 27019
+  raise_not_found_error: false
 
 development:
   <<: *defaults
+  host: 127.0.0.1
   database: startuplab_co_development
 
 test:
   <<: *defaults
+  host: 127.0.0.1
   database: startuplab_co_test
 
 # set these environment variables on your prod server
 production:
+  <<: *defaults
   uri: <%= ENV['MONGOHQ_URL'] %>
-
+  
