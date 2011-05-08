@@ -1,0 +1,33 @@
+.display_container
+  %h1 Events
+  %ul
+    %li.title Why?
+    %p.value 
+      Events are hosted throught the week to promote engagement and community development.
+      Hosts organize events that are meaningful to the startup community. Most events are 
+      completely free/sponsored.
+
+    %li.title How?
+    %p.value
+      All events require previous registration and approval by the organizer. If you would 
+      like to host an event, please contact us to arrange the details.
+
+    %li.title Cost?
+    %p.value 
+      %span.strong Hosting all events if completely free. 
+      %span
+        Event organizer can charge at most CO $5,000 for
+        each event, which can only be used to buy the necessary materials (food etc.).
+      %span.strong
+        If you would like to give a workshop or class and would like to charge more, we can always
+        workout the details, please contact us.
+
+    %li.title Current Event List
+    %p
+      %ol
+        -@events.each do |event|
+          %li
+            %span.strong= "#{event.name}:"
+            %span= "#{event.schedule}"
+            %span= link_to "Go to event page", event_path(event)
+

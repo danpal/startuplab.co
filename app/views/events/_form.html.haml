@@ -1,0 +1,30 @@
+- form_for (@event) do |f|
+  =render "shared/errors", :model => @event
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :schedule
+    %br/
+    = f.text_field :schedule
+  .field
+    = f.label :description
+    %p
+      %span This field accepts Textile markdown, see 
+      %span= link_to "Textile Quick Reference", "http://redcloth.org/hobix.com/textile/quick.html", :target => "_blank"
+    %br/
+    = f.text_area :description
+
+  = f.label "Make event active:"
+  = f.radio_button(:active, "true")
+  = f.label(:active_button, "True")
+  = f.radio_button(:active, "false")
+  = f.label(:active_button, "False")
+
+  .field
+    .actions
+      = f.submit(:class => "button")
+
+
+  

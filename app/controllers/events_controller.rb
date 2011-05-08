@@ -1,9 +1,9 @@
-class UsersController < ApplicationController
+class EventsController < ApplicationController
   
   before_filter :admin_user, :only => [:new, :create, :edit, :update, :destroy]
   
   def index
-    @events = Event.all
+    @events = Event.all(conditions: {active: "true"})
   end
 
   def new
@@ -42,6 +42,8 @@ class UsersController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
+    redirect_to(events_path, :notice => "Event Destroyed")
   end
+
 
 end

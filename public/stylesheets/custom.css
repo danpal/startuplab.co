@@ -7,15 +7,6 @@
 /*----------------------------------------------------
  * General
  *---------------------------------------------------- */
-ol {
-  list-style: none; }
-
-ul {
-  list-style: none; }
-
-h1 {
-  font-family: "minion-pro-1", "minion-pro-2", "Times New Roman", Georgia, serif; }
-
 .clear {
   clear: both; }
 
@@ -30,6 +21,15 @@ A:active {
 
 A:hover {
   text-decoration: none; }
+
+.strong {
+  font-weight: bold; }
+
+.italic {
+  font-style: italic; }
+
+.normal {
+  font-style: normal; }
 
 /*----------------------------------------------------
  * Container, wraps everything
@@ -51,7 +51,7 @@ body {
   height: 120px; }
   .header nav.utility {
     float: right;
-    width: 555px;
+    width: 700px;
     margin-top: 50px; }
     .header nav.utility ul {
       padding: 0;
@@ -68,7 +68,7 @@ body {
       color: #cccccc; }
 
 .logo {
-  width: 230px;
+  width: 240px;
   float: left; }
 
 .tag_line {
@@ -79,10 +79,10 @@ body {
   line-height: 2px; }
 
 /*----------------------------------------------------
- * Content containter
+ * Content container
  *---------------------------------------------------- */
 .content {
-  padding: 5px 0 90px 40px;
+  padding: 5px 40px 90px 40px;
   background: none repeat scroll #f9f9f9;
   -moz-border-radius: 5px;
   -khtml-border-radius: 5px;
@@ -114,12 +114,16 @@ body {
     margin-bottom: 10px;
     text-align: center;
     letter-spacing: -2px;
-    color: #232323; }
+    color: #cc0000; }
   .display_container ul {
     list-style-type: none;
     padding: 0px; }
   .display_container li {
     margin: 20px 0 5px 0; }
+  .display_container h2 {
+    text-align: center;
+    color: #666666;
+    font-size: 18px; }
 
 li.title {
   font-style: italic;
@@ -135,6 +139,84 @@ p.value {
   padding-left: 45px; }
 .value li {
   margin-top: 8px; }
+
+/*----------------------------------------------------
+ *Forms
+ *---------------------------------------------------- */
+.field label {
+  font-weight: bold; }
+.field input {
+  margin: 12px;
+  width: 315px; }
+.field p {
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: -20px; }
+.field textarea {
+  width: 860px;
+  height: 500px;
+  margin: 12px;
+  overflow: auto; }
+
+.actions {
+  text-align: center; }
+  .actions input {
+    width: auto; }
+
+/*----------------------------------------------------
+ * Buttons
+ * This requires the buttons.png file
+ * after just ad the class button to make the button gree
+ * or add button + button_[color] to make any other color
+ *
+ *---------------------------------------------------- */
+.button {
+  -moz-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background: url("/images/buttons/buttons.png"), repeat-x scroll 0 0 transparent;
+  border: 1px solid #85aa40;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  height: 42px;
+  text-align: center;
+  font-family: Arial, Helvetica, Tahoma;
+  text-shadow: 0 -1px 1px #797979;
+  width: auto; }
+  .button:hover {
+    box-shadow: 0 0 6px #b9b9b9; }
+  .button:active {
+    background-color: #748e2b;
+    background-image: none;
+    color: #eeeeee !important; }
+
+.button_blue {
+  background-position: 0 -42px !important;
+  border-color: #679bbc !important; }
+  .button_blue:active {
+    background-color: #4689bb; }
+
+.button_orange {
+  background-position: 0 -126px !important;
+  border-color: #fc8300 !important; }
+  .button_orange:active {
+    background-color: #d07a1d; }
+
+.button_red {
+  background-position: 0 -168px !important;
+  border-color: #c63e3c !important; }
+  .button_red:active {
+    background-color: #d43937; }
+
+.button_pink {
+  background-position: 0 -210px !important;
+  border-color: #bf0265 !important; }
+  .button_pink:active {
+    background-color: #ed1d89; }
 
 /*----------------------------------------------------
  *Error messages

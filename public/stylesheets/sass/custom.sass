@@ -44,14 +44,11 @@ $tag-line-color: #53D4FF
 /*----------------------------------------------------
  * General
  *----------------------------------------------------
-ol
-  list-style: none
 
-ul 
-  list-style: none
 
-h1
+//h1, h2, h3, h4, h5, h6
   font-family: $h1-font
+
 .clear
   clear: both
 
@@ -66,7 +63,15 @@ A:active
 
 A:hover 
   text-decoration: none
-  
+
+.strong
+  font-weight: bold
+
+.italic 
+  font-style: italic
+
+.normal
+  font-style: normal
 
 
 /*----------------------------------------------------
@@ -92,7 +97,7 @@ body
 
   nav.utility
     float: right
-    width: 555px
+    width: 700px
     margin-top: 50px
 
     ul
@@ -114,7 +119,7 @@ body
 
 
 .logo
-  width: 230px
+  width: 240px
   float: left
 
 .tag_line
@@ -128,12 +133,12 @@ body
 
 
 /*----------------------------------------------------
- * Content containter
+ * Content container
  *----------------------------------------------------
 
 .content
 
-  padding: 5px 0 90px 40px
+  padding: 5px 40px 90px 40px
   background: none repeat scroll $background-content-color
   @include rounded(5px)
 
@@ -168,7 +173,7 @@ body
     margin-bottom: 10px
     text-align: center
     letter-spacing: -2px
-    color: #232323
+    color: #CC0000
   ul
     list-style-type: none
     padding: 0px
@@ -176,6 +181,10 @@ body
   li
     margin: 20px 0 5px 0
 
+  h2
+    text-align: center
+    color: #666
+    font-size: 18px
 
 li.title
   font-style: italic
@@ -194,6 +203,89 @@ p.value
   li
     margin-top: 8px
 
+/*----------------------------------------------------
+ *Forms
+ *----------------------------------------------------
+
+.field
+  label
+    font-weight: bold
+  input
+    margin: 12px
+    width: 315px
+  p
+    font-style: italic
+    font-size: 12px
+    margin-top: 2px
+    margin-bottom: -20px
+
+  textarea
+    width: 860px
+    height: 500px
+    margin: 12px
+    overflow: auto
+
+.actions
+  text-align: center  
+  
+  input
+    width: auto
+    
+/*----------------------------------------------------
+ * Buttons
+ * This requires the buttons.png file
+ * after just ad the class button to make the button gree
+ * or add button + button_[color] to make any other color
+ *
+ *----------------------------------------------------
+ 
+.button
+  @include rounded(7px)
+  background: url("/images/buttons/buttons.png"), repeat-x scroll 0 0  transparent
+  border: 1px solid #85AA40
+  color: #FFF
+  cursor: pointer
+  font-size: 20px
+  font-weight: bold
+  height: 42px
+  text-align: center
+  font-family: Arial,Helvetica,Tahoma
+  text-shadow: 0 -1px 1px #797979
+  width: auto
+  
+  &:hover
+    box-shadow: 0 0 6px #B9B9B9
+  &:active
+    background-color: #748E2B
+    background-image: none
+    color: #EEEEEE !important
+
+.button_blue
+  background-position: 0 -42px !important
+  border-color: #679BBC !important
+  &:active
+    background-color: #4689BB
+
+.button_orange
+  background-position: 0 -126px !important
+  border-color: #FC8300 !important
+  &:active
+    background-color: #D07A1D
+
+.button_red
+  background-position: 0 -168px !important
+  border-color: #C63E3C !important
+  &:active
+    background-color: #D43937
+
+.button_pink
+  background-position: 0 -210px !important
+  border-color: #BF0265 !important
+  &:active
+    background-color: #ED1D89
+
+
+  
 /*----------------------------------------------------
  *Error messages
  *----------------------------------------------------
@@ -275,14 +367,14 @@ ul li.errors
     ul
       text-align: center
       padding: 0
-    
+
     li
       font-size: 13px
       color: $link-color
       font-weight: bold
       display: inline
       margin: 3px 15px 3px 3px
-    
+
     li a:visited
       color: $link-color
     li a:hover

@@ -14,4 +14,21 @@
           %span List of all applications:
           %span= link_to "Application", applications_path
           
-    
+    %li.title Current Active Event List
+    %p
+      %ol
+        -@active_events.each do |event|
+          %li
+            %span.strong= "#{event.name}:"
+            %span= "#{event.schedule}"
+            %span= link_to "Go to event page", event_path(event)
+ 
+    %li.title Current unactive Event List
+    %p
+      %ol
+        -@unactive_events.each do |event|
+          %li
+            %span.strong= "#{event.name}:"
+            %span= "#{event.schedule}"
+            %span= link_to "Go to event page", event_path(event)
+ 
