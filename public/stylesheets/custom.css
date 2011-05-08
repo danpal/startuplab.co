@@ -49,11 +49,11 @@ body {
  * Header
  *---------------------------------------------------- */
 .header {
-  height: 160px; }
+  height: 120px; }
   .header nav.utility {
     float: right;
     width: 555px;
-    margin-top: 90px; }
+    margin-top: 50px; }
     .header nav.utility ul {
       padding: 0;
       text-align: right; }
@@ -73,12 +73,11 @@ body {
   float: left; }
 
 .tag_line {
-  font-size: 13px;
+  font-size: 15px;
   display: block;
   color: #97d415;
   font-style: normal;
-  line-height: 0px;
-  margin-left: 13px; }
+  line-height: 2px; }
 
 /*----------------------------------------------------
  * Content containter
