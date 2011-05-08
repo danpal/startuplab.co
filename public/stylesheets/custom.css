@@ -75,7 +75,7 @@ body {
 .tag_line {
   font-size: 15px;
   display: block;
-  color: #97d415;
+  color: #53d4ff;
   font-style: normal;
   line-height: 2px; }
 
@@ -220,7 +220,7 @@ ul li.errors {
 
 .copyright {
   padding: 15px;
-  color: black;
+  color: #bbbbbb;
   font-size: 10px;
   line-height: 1.4em;
   text-align: center; }
