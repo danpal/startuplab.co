@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]  
     user = User.authenticate(auth)  
     sign_in(user)
-    redirect_to user_path(user), :notice => "Signed in"
+    redirect_to user_path(user), :flash => {:success => "Signed in"}
   end
 
   def destroy

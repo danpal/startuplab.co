@@ -16,7 +16,7 @@ StartuplabCo::Application.routes.draw do
   #authentication 
   match "/auth/:provider/callback" => "sessions#create"  
   match "/signout" => "sessions#destroy", :as => :signout  
-  match "signin", :to => 'pages#signin' 
+  match "/signin", :to => 'pages#signin' 
 
 
 end

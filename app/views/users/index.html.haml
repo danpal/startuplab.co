@@ -1,14 +1,15 @@
-%h1 User Index
-%ul
-  -if @users
-    - @users.each do |user|
-      %li
-        -keys = user.attributes.keys[1..5]
-        - keys.each do |key|
-          %span
-            %strong= "#{key.capitalize()}:"
-          %span= "#{user[key]}, "
-        %span= link_to "Show", user
-        %span= link_to "Edit", edit_user_path(user)
-        %span= link_to "Destroy", user, :confirm => "Are you sure", :method => :delete
+.display_container
+  %h1 User Index
+  %ul
+    -if @users
+      - @users.each do |user|
+        %li
+          -keys = user.attributes.keys[1..5]
+          - keys.each do |key|
+            %span
+              %strong= "#{key.capitalize()}:"
+            %span= "#{user[key]}, "
+          %span= link_to "Show", user
+          %span= link_to "Edit", edit_user_path(user)
+          %span= link_to "Destroy", user, :confirm => "Are you sure", :method => :delete
 

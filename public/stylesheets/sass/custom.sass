@@ -2,8 +2,13 @@
  * Globals
  *----------------------------------------------------
 
-$other-font: 'Lucida Grande','Lucida Sans Unicode',Verdana,sans-serif
-$h1-font: 'minion-pro-1","minion-pro-2","Times New Roman',Georgia,serif
+$general-font: 'Lucida Grande',Verdana,sans-serif
+$h1-font: "minion-pro-1","minion-pro-2","Times New Roman",Georgia,serif
+$background-color: #222
+$background-content-color: #F9F9F9
+$nav-links-back-color: #315F8D
+$link_color: #E7E7E7
+$tag-line-color: #97D415
 
 /*----------------------------------------------------
  * Mixins
@@ -36,267 +41,154 @@ $h1-font: 'minion-pro-1","minion-pro-2","Times New Roman',Georgia,serif
   background-image: url($image_path)
   background-repeat: repeat-x 
 
+/*----------------------------------------------------
+ * General
+ *----------------------------------------------------
+ol
+  list-style: none
+
+ul 
+  list-style: none
+
+h1
+  font-family: $h1-font
+.clear
+  clear: both
+
+A:link 
+  text-decoration: none
+
+A:visited 
+  text-decoration: none
+
+A:active 
+  text-decoration: none
+
+A:hover 
+  text-decoration: none
+  color: white
+
+
+/*----------------------------------------------------
+ * Container, wraps everything
+ *----------------------------------------------------
+body
+  background: none repeat scroll $background-color
+  font-family: $general-font
+  margin: 0 auto
+  
+.container
+  width: 960px
+  background: none repeat scroll $background-color
+  margin: 0 auto
+
 
 /*----------------------------------------------------
  * Header
  *----------------------------------------------------
-.container_header 
-  #background: -moz-linear-gradient(center bottom , #005289 0pt, #242562 75%) repeat scroll 0 0 transparent
-  height: 80px
-
 .header
-  padding: 0px 0px 0px 10px
-  width: 960px
   
+  height: 160px
+
+  nav.utility
+    float: right
+    width: 555px
+    margin-top: 90px
+
+    ul
+      padding: 0
+      text-align: right
+
+    li
+      font-size: 16px
+      color: $link-color
+      font-weight: bold
+      display: inline
+      margin-left: 18px
+
+    li a:visited
+      color: $link-color
+    li a:hover
+      color: #ccc
+
+
+
 .logo
-  margin: 0 0 0 10px
-  padding: 0 0 0 345px
+  width: 230px
+  float: left
 
 .tag_line
-  font-size: 18px
-  color: #777
-  font-style: italic
-  margin: -28px 0px 0px 16px
-  padding: 0 0 0 278px
-  width: 960px
+  font-size: 13px
   display: block
+  color: $tag-line-color
+  font-style: normal
+  line-height: 0px
+  margin-left: 13px
+
 
 
 /*----------------------------------------------------
- * Index
+ * Content containter
  *----------------------------------------------------
-.container
-  width: 960px
-  background-color: #FFFFFF
-  height: auto !important
-  #margin: 0 auto -18em
-  min-height: 100%
-
 
 .content
-  padding: 10px 20px 20px 20px
 
-.statement 
+  padding: 5px 0 90px 40px
+  background: none repeat scroll $background-content-color
+  @include rounded(5px)
+
+
+/*----------------------------------------------------
+ * Sign in / Register
+ *----------------------------------------------------
+
+.login
   h1
-    font-family: $h1-font
-    font-size: 56px
-    font-weight: normal
-    letter-spacing: -1px
-    margin-bottom: 0
-    margin-top: 30px
+    text-align: center
+    font-size: 22px
+  p
     text-align: center
 
-.explanation
-  padding: 30px 0px 0px 35px
-  width: 960px
-  height: 205px
+.login_options
+  padding-left: 255px
+  li
+    display: inline
+    padding-left: 15px
 
-.column
-  float: left
-  margin-right: 40px
-  width: 270px
+/*----------------------------------------------------
+ * display container, used to display data
+ *----------------------------------------------------
 
-  h3
-    color: #CCCCCC
-    float: left
+.display_container
+
+  font-family: "arial, sans-serif"
+
+  h1
     font-size: 58px
-    font-weight: 500
-    line-height: normal
-    margin: 5px 7px 0 0
-    
-  h4
-    color: #CC0000
-    font-family: $other-font
-    font-size: 16px
-    margin: 5px 0
-
-  p
-    font-family: $other-font
-    margin: 0 0 0 36px
-    font-size: 14px
-
-
-.registration
-  height: 35em
-
-.ceo_message
-  float: right
-  padding: 0 0 0 540px 
-
-  p
-    font-size: 13px
-    font-family: $other-font
-    margin: 0 0 -16px 0
-    padding: 0 0 0 107px
-  h3
-    font-family: $other-font
-    font-size: 18px
+    margin-bottom: 10px
     text-align: center
+    letter-spacing: -2px
+    color: #232323
+  ul
+    list-style-type: none
+    padding: 0px
+
+  li
+    margin: 20px 0 5px 0
 
 
-.form_billboard
-  margin: 0px 0px
-  background: none repeat scroll 0 0 #FFFFFF
-  border: 8px solid #666666
-  padding: 25px
-  width: 310px
-  float: right
-  @include rounded(3px)
-  
-  h3
-    font-size: 22px
-    text-align: center
-    color: #CC0000
-
-  .field
-    margin: 10px
-    input
-      width: 263px
-      margin: 5px 0px 5px 0 
-    label
-      font-weight: bold
-      color: #333
-
-
-#page2_h1
-  text-align: center
-
-.form2_billboard
-  margin: 20px 120px
-  background: none repeat scroll 0 0 #FFFFFF
-  border: 3px solid #666666
-  padding: 25px
-  width: 640px
-  @include rounded(3px)
-
-  p
-    text-align: center
-    margin: 15px 0px 20px 0px
-    color: #376D00
-    font-size: 24px
-    
-  h3
-    font-size: 22px
-    text-align: center
-  
-  .field
-    margin: 10px
-    padding: 0px 0px 0px 103px
-    input
-      width: 400px
-      margin: 5px 0px 5px 0 
-    label
-      font-weight: bold
-      color: #333
-
-  .actions
-    text-align: center
-
-  #user_description
-    width: 408px
-
-.button.orange
-  background: #faa02e
-  background: -moz-linear-gradient(center bottom, #df6b1d, #faa02e) repeat scroll 0 0 transparent
-  background: -webkit-gradient(linear, left bottom, left top, from(#df6b1d), to(#faa02e))
-  border-color: #DE8511
-  box-shadow: inset 1px 1px 0px #FAC76E
-  -moz-box-shadow: inset 1px 1px 0px #FAC76E
-  -webkit-box-shadow: inset 1px 1px 0px #FAC76E
-  color: #FFFFFF
-  text-shadow: 0 -1px 1px #BDA07C
-  text-align: center
-  border-style: solid
-  border-width: 1px
-  font-family: $other-font
-  font-size: 23px
+li.title
+  font-style: italic
   font-weight: bold
-  height: 47px
-  line-height: 40px
-  margin: 13px 0px 0px 25px
-  @include rounded(3px)
-  width: 252px
-
-
-.button.orange:hover
-  background: #dd7e3e !important
-  background: -moz-linear-gradient(bottom, #dd7e3e, #f9a53b) !important
-  background: -webkit-gradient(linear, left bottom, left top, from(#dd7e3e), to(#f9a53b)) !important
-  cursor: pointer
-
-.button.orange:active
-  background: #f9a53b !important
-  background: -moz-linear-gradient(top, #dd7e3e, #f9a53b) !important
-  background: -webkit-gradient(linear, left top, left bottom, from(#dd7e3e), to(#f9a53b)) !important
-
-
-
-
-.quotes
-  float: left
-  margin: 0 0 0 70px
-  width: 350px
+  font-size: 25px
   
-  h3
-    color: #888888
-    font-size: 22px
-    font-style: italic
-    font-weight: 500
-    margin: 35px 0 10px
-    font-family: $h1-font
+
+p.value
+  font-size: 16px
+  padding: 8px 0px 20px 25px
   
-  p  
-    font-family: $other-font
-    font-size: 12px
-    margin: 0
-    color: #222222
-    text-align: center
 
-
-
-
-
-/*----------------------------------------------------
- *page 3
- *----------------------------------------------------
-.share
-  border: 3px solid #ccc
-  margin: 20px 0 0 200px
-  text-align: center
-  width: 500px
-  @include rounded(6px)
-  h2
-    font-family: $other-font
-    margin-bottom: -12px
-    font-size: 32px
-    color: #3b5998   
-  p
-    font-size: 16px
-  
-  img
-    padding: 5px
-    margin-right: 20px
-
-
-#thank_you_note
-  p
-    
-
-/*----------------------------------------------------
- *FAQ
- *----------------------------------------------------
-.faq_list
-
-  dt
-    font-size: 16px
-    font-weight: bold
-    margin: 0 0 10px
-
-  dd
-    margin: 0 50px 10px
-
-
-
+      
 /*----------------------------------------------------
  *Error messages
  *----------------------------------------------------
@@ -324,19 +216,29 @@ ul li.errors
   border: 2px solid #ddd
 
 .error, .alert
-  background: #fbe3e4
-  color: #8a1f11
-  border-color: #fbc2c4
+  background: #CC0000
+  color: #F2E1E1
+  border-color: #6B0000
+  text-align: center
+  font-weight: bold
+  font-size: 18px
 
 .notice
-  background: #fff6bf
-  color: #514721
-  border-color: #ffd324
+  background: #F2EA93
+  color: #3A3824
+  border-color: #CEBC18
+  text-align: center
+  font-weight: bold
+  font-size: 18px
 
 .success
-  background: #e6efc2
-  color: #264409
-  border-color: #c6d880
+  background: #8DAE31
+  color: white
+  border-color: #638206
+  font-size: 18px
+  text-align: center
+  font-weight: bold
+
 
 .info
   background: #d5edf8
@@ -362,41 +264,28 @@ ul li.errors
 
 
 .footer
-  height: 25em
-
-.footer
-  background-color: #262626
-  margin: 100px 0 0 0
-  padding: 0px 0 0 0
-  clear: both
-  overflow: hidden
+  height: 10em
 
   nav.utility
-    text-align: center
-    margin: 0
-    
     ul
-      padding: 0  
+      text-align: center
+      padding: 0
     
     li
-      float: none
-      display: inline
-      margin: 0 10px 0 0
-
-    a
-      color: #fff
+      font-size: 13px
+      color: $link-color
       font-weight: bold
-      font-size: 12px
-
-.container_footer
-  overflow: hidden
-  width: 960px 
-  #margin: 0 auto
-  padding: 20px 0
+      display: inline
+      margin: 3px 15px 3px 3px
+    
+    li a:visited
+      color: $link-color
+    li a:hover
+      color: #ccc
 
 .copyright
   padding: 15px
-  color: #ccc
+  color: #000  
   font-size: 10px
   line-height: 1.4em
   text-align: center
