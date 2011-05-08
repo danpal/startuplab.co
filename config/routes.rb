@@ -10,7 +10,15 @@ StartuplabCo::Application.routes.draw do
 
   #users
   resources :users
-  
+
+  #applications
+  resources :applications
+
+  #events
+  resources :events
+
+  #administration
+  match "/admin", :to => 'pages#admin'
 
 
   #authentication 
@@ -18,5 +26,5 @@ StartuplabCo::Application.routes.draw do
   match "/signout" => "sessions#destroy", :as => :signout  
   match "/signin", :to => 'pages#signin' 
 
-
+  
 end

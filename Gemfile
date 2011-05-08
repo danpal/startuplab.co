@@ -8,6 +8,8 @@ gem 'rails3-generators'
 gem 'haml-rails'
 gem 'haml'
 gem 'sass'
+gem 'RedCloth'
+
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'

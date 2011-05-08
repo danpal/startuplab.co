@@ -4,7 +4,7 @@ class Event
   field :name, type: String
   field :schedule, type: String
   field :description, type: String
-  has_many :application
+  has_many :applications
 
 
 

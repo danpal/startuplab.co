@@ -1,0 +1,17 @@
+.display_container
+  %h1 Admin Panel
+  %ul
+    %li.title Administration Links
+    .value
+      %ol
+        %li
+          %span See listing of all users: 
+          %span= link_to "users", users_path  
+        %li 
+          %span Create a new event:
+          %span= link_to "new event", new_event_path
+        %li 
+          %span List of all applications:
+          %span= link_to "Application", applications_path
+          
+    

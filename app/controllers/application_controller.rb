@@ -2,6 +2,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include SessionsHelper
   
+  #Exceptions
+  unless Rails.application.config.consider_all_requests_local
+    rescue_from  Mongoid::Errors::DocumentNotFound do |exception|
+      render :status => 404
+    end
+  end
+
   def redirect_away(location, msg = nil)
     session[:original_uri] = request.request_uri
     flash[:notice] = msg if msg
