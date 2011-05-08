@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @event = Event.find(params[:id]
+    @event = Event.find(params[:id])
     if @event.update_attributes(params[:event])
       redirect_to(@event, :notice => "Event updated succesfully")
     else
