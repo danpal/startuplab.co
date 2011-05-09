@@ -4,11 +4,19 @@
 
 $general-font: 'Lucida Grande',Verdana,sans-serif
 $h1-font: "minion-pro-1","minion-pro-2","Times New Roman",Georgia,serif
-$background-color: #222
-$background-content-color: #F9F9F9
-$nav-links-back-color: #315F8D
-$link_color: #E7E7E7
-$tag-line-color: #53D4FF
+$background-color: #E1E1E1
+$background-content-color: #F1F1F1
+$background-footer-color: #222
+$links-hover-color: #444
+$tag-line-color: #4492bb
+
+$links-color: #555555
+$headers-color: #2D2d2D
+$text-color: #3F3F3F
+$titles-color: #3A3A3A
+
+$footer-links-color: #ccc
+$footer-text-color: #ddd
 
 /*----------------------------------------------------
  * Mixins
@@ -46,8 +54,9 @@ $tag-line-color: #53D4FF
  *----------------------------------------------------
 
 
-//h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6
   font-family: $h1-font
+  color: $headers-color
 
 .clear
   clear: both
@@ -73,19 +82,34 @@ A:hover
 .normal
   font-style: normal
 
+p
+  color: $text-color
 
+
+//background: none repeat scroll $background-content-color
 /*----------------------------------------------------
  * Container, wraps everything
- *----------------------------------------------------
+ *---------------------------------------------------
 body
-  background: none repeat scroll $background-color
   font-family: $general-font
-  margin: 0 auto
+  width: 960px
+  background: none repeat scroll $background-content-color
+
+
+.left_side_push
+  float: left
+  width: 80px
+  height: 120em
+  margin-top: -10px
+  margin-left: -6px
+  background: none repeat scroll $background-color
   
 .container
-  width: 960px
-  background: none repeat scroll $background-color
-  margin: 0 auto
+  margin-left: 74px
+  width: 886px
+  padding: 0px 20px 90px 40px
+  background: none repeat scroll $background-content-color
+  
 
 
 /*----------------------------------------------------
@@ -93,12 +117,12 @@ body
  *----------------------------------------------------
 .header
   
-  height: 120px
+  height: 90px
 
   nav.utility
     float: right
-    width: 700px
-    margin-top: 50px
+    width: 555px
+    margin-top: 47px
 
     ul
       padding: 0
@@ -106,15 +130,17 @@ body
 
     li
       font-size: 16px
-      color: $link-color
+      color: $links-color
       font-weight: bold
       display: inline
       margin-left: 18px
 
+    li a
+      color: $links-color
     li a:visited
-      color: $link-color
+      color: $links-color
     li a:hover
-      color: #ccc
+      color: $links-hover-color
 
 
 
@@ -136,10 +162,9 @@ body
  * Content container
  *----------------------------------------------------
 
-.content
-
-  padding: 5px 40px 90px 40px
-  background: none repeat scroll $background-content-color
+.content_container
+  
+  //background: none repeat scroll $background-content-color
   @include rounded(5px)
 
 
@@ -173,7 +198,7 @@ body
     margin-bottom: 10px
     text-align: center
     letter-spacing: -2px
-    color: #CC0000
+    color: $headers-color
   ul
     list-style-type: none
     padding: 0px
@@ -186,11 +211,12 @@ body
     color: #666
     font-size: 18px
 
+
 li.title
   font-style: italic
   font-weight: bold
   font-size: 25px
-  
+  color: $titles-color
 
 p.value
   font-size: 16px
@@ -361,8 +387,11 @@ ul li.errors
 
 
 .footer
-  height: 10em
-
+  margin-left: 74px
+  width: 960px
+  height: 15em
+  background: none repeat scroll $background-footer-color
+  margin-top: 7em 
   nav.utility
     ul
       text-align: center
@@ -370,19 +399,21 @@ ul li.errors
 
     li
       font-size: 13px
-      color: $link-color
+      color: $footer-links-color
       font-weight: bold
       display: inline
       margin: 3px 15px 3px 3px
-
+    
+    li a
+      color: $footer-links-color
     li a:visited
-      color: $link-color
+      color: $footer-links-color
     li a:hover
-      color: #ccc
+      color: $footer-links-color
 
 .copyright
   padding: 15px
-  color: #bbb  
+  color: $footer-text-color  
   font-size: 10px
   line-height: 1.4em
   text-align: center

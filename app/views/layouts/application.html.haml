@@ -8,14 +8,17 @@
     = render 'layouts/stylesheets'    
     = csrf_meta_tag
   %body
-    - flash.each do |key, value|
-      %div{:class => "flash #{key}"}= value
+    .flash
+      - flash.each do |key, value|
+        %div{:class => "flash #{key}"}= value
+    .left_side_push
     %section.container
       = render 'layouts/header'
-      %section.content
+      %section.content_container
         = yield
-      = render 'layouts/footer'
-
+    
+    = render 'layouts/footer'
+    
     = render "layouts/googleanalytics"
     .debug
       = debug(params) if Rails.env.development?
