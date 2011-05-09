@@ -1,8 +1,19 @@
 %footer.footer
+  %p Powered by
+  .badges
+    =image_tag("rails.png", :alt => "powered by ruby on rails", :class => "badge_image")
+    =image_tag("mongo.png", :alt => "powered by mongodb", :class => "badge_image")
+    =image_tag("mongoid.png", :alt => "powered by mongoid", :class => "badge_image")
+    =image_tag("heroku.png", :alt => "powered by heroku", :class => "badge_image")
+    =link_to image_tag("github.png", :alt => "powered by github", :class => "badge_image"), "http://github.com/danpal/startuplab.co"
+    
   %nav.utility
+     
     %ul
       %li= link_to "Home", index_path
+      %li= "|"
       %li= link_to "Contact us", contact_us_path
+      %li= "|"
       %li= link_to "FAQ", faq_path
 
   -#=link_to logo, home_path, :class => "footer_logo"
@@ -10,8 +21,5 @@
   .copyright
     %p
       The names and logos for startuplab.co are registered trademarks of startuplab.co, LLC.
-      %br/
-      The names and logos for startuplab.co are trademarks of startuplab.co, LLC.
-      %br/
-      All text and design is copyright ©2010-2011 startuplab.co, LLC. All rights reserved.
+
 

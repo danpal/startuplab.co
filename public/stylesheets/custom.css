@@ -57,7 +57,7 @@ body {
 .container {
   margin-left: 74px;
   width: 886px;
-  padding: 0px 20px 90px 40px;
+  padding: 0px 0px 90px 20px;
   background: none repeat scroll #f1f1f1; }
 
 /*----------------------------------------------------
@@ -306,17 +306,26 @@ ul li.errors {
 /*----------------------------------------------------
  * Footer
  *---------------------------------------------------- */
+.badges {
+  padding: 5px 0px 0px 60px; }
+
+.badge_image {
+  padding: 0 10px 0 0px; }
+
 .footer {
   margin-left: 74px;
-  width: 960px;
-  height: 15em;
+  width: 940px;
+  height: 25em;
   background: none repeat scroll #222222;
   margin-top: 7em; }
-  .footer nav.utility ul {
+  .footer p {
     text-align: center;
-    padding: 0; }
+    padding-top: 20px; }
+  .footer nav.utility ul {
+    padding: 20px;
+    text-align: center; }
   .footer nav.utility li {
-    font-size: 13px;
+    font-size: 14px;
     color: #cccccc;
     font-weight: bold;
     display: inline;
@@ -329,8 +338,7 @@ ul li.errors {
     color: #cccccc; }
 
 .copyright {
-  padding: 15px;
+  padding-left: 20px;
   color: #dddddd;
-  font-size: 10px;
-  line-height: 1.4em;
-  text-align: center; }
+  font-size: 12px;
+  line-height: 1.4em; }
