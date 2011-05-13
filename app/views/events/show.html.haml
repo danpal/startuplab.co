@@ -2,11 +2,12 @@
   %h1= @event.name
   %h2= @event.schedule 
 
-  .textile
+.textile
+  -if(@event.description)
     -textile_object = RedCloth.new(@event.description).to_html
     %p= textile_object.html_safe
 
-  -if current_user && current_user.admin?
-    = link_to "edit", edit_event_path(@event)
-    = link_to "Destroy", @event, :confirm => "Are you sure", :method => :delete
+-if current_user && current_user.admin?
+  = link_to "edit", edit_event_path(@event)
+  = link_to "Destroy", @event, :confirm => "Are you sure", :method => :delete
   
