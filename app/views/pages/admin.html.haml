@@ -15,7 +15,7 @@
           %span= link_to "Application", applications_path
           
     %li.title Current Active Event List
-    %p
+    .value
       %ol
         -@active_events.each do |event|
           %li
@@ -24,7 +24,7 @@
             %span= link_to "Go to event page", event_path(event)
  
     %li.title Current unactive Event List
-    %p
+    .value
       %ol
         -@unactive_events.each do |event|
           %li

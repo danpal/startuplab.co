@@ -49,7 +49,7 @@ body {
 .left_side_push {
   float: left;
   width: 80px;
-  height: 120em;
+  height: 200em;
   margin-top: -10px;
   margin-left: -6px;
   background: none repeat scroll #e1e1e1; }
@@ -162,6 +162,9 @@ body {
     list-style-type: none;
     padding: 0px;
     margin-top: 50px; }
+  .display_container ol {
+    list-style-position: inside;
+    padding: 0px; }
   .display_container li {
     margin: 20px 0 5px 0; }
   .display_container h2 {
@@ -182,7 +185,7 @@ p.value {
 
 .value ol {
   list-style-type: decimal;
-  padding-left: 45px; }
+  padding-left: 25px; }
 .value li {
   margin-top: 8px; }
 
