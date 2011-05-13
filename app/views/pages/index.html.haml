@@ -1,2 +1,22 @@
-%h1 Index
+.index_column_left
+  %p 
+    In 2011 Startuplab.co was launched to promote tech entrepeneurship in Bogota,
+    Colombia. We are a small team focused on creating the perfect environment to
+    launch your startup. We provide space, funding (between $10,000 and $20,000)
+    and lots of help. If you are thinking of launching a startup in the web, 
+    or mobile space, this is the place you want to be.
 
+  .nav_links
+    %ul
+      %li= link_to "Blog",   '#'
+      %li= '|'
+      %li= link_to "Apply",  apply_path
+      %li= '|'
+      %li= link_to "Events", events_path
+      %li= '|' 
+      %li= link_to "Rules", rules_path
+
+.index_column_right
+  -#Random starts at 0 till seed - 1. So put the number of images as seed, add 1 always
+  -image_number = Random.new.rand(3) + 1
+  = image_tag("office#{image_number}.jpg", :alt=> 'Startuplab.co co-working space')

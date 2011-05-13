@@ -13,18 +13,7 @@ class PagesController < ApplicationController
   def admin
     @active_events = Event.all(conditions: {active: "true"})
     @unactive_events = Event.all(conditions: {active: "false"})
-
   end
-
-  def contact
-  end
-
-  def help
-  end
-
-  def faq
-  end
-  
 
 
 end

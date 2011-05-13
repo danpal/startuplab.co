@@ -64,7 +64,7 @@ body {
  * Header
  *---------------------------------------------------- */
 .header {
-  height: 90px; }
+  height: 130px; }
   .header nav.utility {
     float: right;
     width: 555px;
@@ -121,25 +121,54 @@ body {
     padding-left: 15px; }
 
 /*----------------------------------------------------
+ *index
+ *---------------------------------------------------- */
+.index_column_left {
+  float: left;
+  width: 350px;
+  padding-left: 70px;
+  padding-top: 125px; }
+  .index_column_left p {
+    font-size: 12px;
+    font-family: "Verdana"; }
+  .index_column_left ul {
+    margin-top: -3px;
+    padding-left: 60px; }
+  .index_column_left li {
+    display: inline;
+    font-size: 13px; }
+  .index_column_left li a {
+    color: #ff0033; }
+  .index_column_left li a:visited {
+    color: #ff0033; }
+  .index_column_left li a:hover {
+    color: #444444; }
+
+.index_column_right img {
+  padding: 110px 0px 0px 35px; }
+
+/*----------------------------------------------------
  * display container, used to display data
  *---------------------------------------------------- */
 .display_container {
   font-family: "arial, sans-serif"; }
   .display_container h1 {
     font-size: 58px;
-    margin-bottom: 10px;
     text-align: center;
     letter-spacing: -2px;
-    color: #2d2d2d; }
+    color: #2d2d2d;
+    margin: 0; }
   .display_container ul {
     list-style-type: none;
-    padding: 0px; }
+    padding: 0px;
+    margin-top: 50px; }
   .display_container li {
     margin: 20px 0 5px 0; }
   .display_container h2 {
     text-align: center;
     color: #666666;
-    font-size: 18px; }
+    font-size: 18px;
+    margin: 0px; }
 
 li.title {
   font-style: italic;

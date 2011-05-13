@@ -117,7 +117,7 @@ body
  *----------------------------------------------------
 .header
   
-  height: 90px
+  height: 130px
 
   nav.utility
     float: right
@@ -184,6 +184,37 @@ body
   li
     display: inline
     padding-left: 15px
+    
+/*----------------------------------------------------
+ *index
+ *----------------------------------------------------
+.index_column_left
+
+  float: left
+  width: 350px
+  padding-left: 70px
+  padding-top: 125px
+  p
+    font-size: 12px
+    font-family: 'Verdana'
+  ul
+    margin-top: -3px
+    padding-left: 60px
+
+  li
+    display: inline
+    font-size: 13px 
+  
+  li a
+    color: #FF0033
+  li a:visited
+    color: #FF0033
+  li a:hover
+    color: $links-hover-color
+
+.index_column_right
+  img
+    padding: 110px 0px 0px 35px
 
 /*----------------------------------------------------
  * display container, used to display data
@@ -195,13 +226,15 @@ body
 
   h1
     font-size: 58px
-    margin-bottom: 10px
     text-align: center
     letter-spacing: -2px
     color: $headers-color
+    margin: 0
+
   ul
     list-style-type: none
     padding: 0px
+    margin-top: 50px
 
   li
     margin: 20px 0 5px 0
@@ -210,7 +243,7 @@ body
     text-align: center
     color: #666
     font-size: 18px
-
+    margin: 0px
 
 li.title
   font-style: italic

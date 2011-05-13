@@ -7,7 +7,11 @@ StartuplabCo::Application.routes.draw do
   match '/faq', :to => 'pages#faq'
   match '/index', :to => 'pages#index'
   match '/about', :to => 'pages#about'
+  match '/apply', :to => 'pages#apply'
+  match '/rules', :to => 'pages#rules'
 
+  
+  
   #users
   resources :users
 
