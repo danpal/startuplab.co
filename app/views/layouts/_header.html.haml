@@ -1,18 +1,11 @@
 %header.header
   %h1.logo
     =link_to image_tag("logo.png", :tiltle=> "startuplab.co", :alt => "startuplab.co"), index_path, :class => "logo"
-    %em.tag_line 
-      %span.yellow
-        Colombian 
-      %span.blue
-        startups 
-      %span.red
-        unleashed
   %nav.utility
     %ul
       %li= link_to "Blog", #
       %li= link_to "Events", events_path
-      %li= link_to "About",  about_path
+      %li= link_to "Rules",  rules_path
       %li= link_to "Photos", #
       %li= link_to "Companies", #
       - if current_user.nil?
