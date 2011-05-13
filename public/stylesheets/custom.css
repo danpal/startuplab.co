@@ -92,9 +92,18 @@ body {
 .tag_line {
   font-size: 15px;
   display: block;
-  color: #4492bb;
+  color: #1010a5;
   font-style: normal;
   line-height: 2px; }
+
+.yellow {
+  color: #ffbc1b; }
+
+.blue {
+  color: #1010a5; }
+
+.red {
+  color: #cc0000; }
 
 /*----------------------------------------------------
  * Content container
