@@ -50,7 +50,7 @@ body {
   float: left;
   width: 80px;
   height: 200em;
-  margin-top: -10px;
+  margin-top: -20px;
   margin-left: -6px;
   background: none repeat scroll #e1e1e1; }
 
@@ -254,6 +254,22 @@ p.value {
   border-color: #bf0265 !important; }
   .button_pink:active {
     background-color: #ed1d89; }
+
+/*----------------------------------------------------
+ *About page
+ *---------------------------------------------------- */
+.team {
+  margin-top: 0px !important; }
+
+.person {
+  margin: 0px 0px 40px 0px !important; }
+  .person img {
+    margin-top: 20px; }
+  .person h3 {
+    margin-bottom: 0; }
+  .person h4 {
+    margin-top: 3px;
+    margin-bottom: 0px; }
 
 /*----------------------------------------------------
  *Error messages

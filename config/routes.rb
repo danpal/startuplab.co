@@ -9,7 +9,7 @@ StartuplabCo::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/apply', :to => 'pages#apply'
   match '/rules', :to => 'pages#rules'
-
+  match '/companies', :to => 'pages#companies'
   
   
   #users
