@@ -9,7 +9,7 @@ gem 'haml-rails'
 gem 'haml'
 gem 'sass'
 gem 'RedCloth'
-
+gem 'toto-bongo'
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'

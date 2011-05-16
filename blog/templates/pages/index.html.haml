@@ -1,0 +1,23 @@
+#articles
+  -for article in articles[0...3]
+    .post
+      %header
+        %h1
+          %a{:href => article.path}= article.title
+          %span.date= article.date
+      .content
+        = article.summary
+      .more
+        %a{:href => article.path} read on »
+#archives
+  %h2 Older Posts
+  %ul
+    -for entry in archives[3..6]
+      %li
+        %a{:href => entry.path}= entry.title
+    %li
+      %a{:href => "/blog/archives" } See all older posts »
+
+
+
+
