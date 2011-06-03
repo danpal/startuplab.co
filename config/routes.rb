@@ -10,7 +10,7 @@ StartuplabCo::Application.routes.draw do
   match '/apply', :to => 'pages#apply'
   match '/rules', :to => 'pages#rules'
   match '/companies', :to => 'pages#companies'
-  
+  match '/photos', :to => 'pages#photos' 
   
   #users
   resources :users

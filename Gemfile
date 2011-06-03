@@ -10,6 +10,7 @@ gem 'haml'
 gem 'sass'
 gem 'RedCloth'
 gem 'toto-bongo'
+gem 'jquery-rails'
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'
