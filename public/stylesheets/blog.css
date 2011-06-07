@@ -12,6 +12,9 @@ body {
 header, footer, section, article {
   display: block; }
 
+.red {
+  color: #b83000 !important; }
+
 .green {
   color: #339933 !important; }
 
@@ -96,9 +99,6 @@ h1, h2, h3, h4 {
   margin: 0;
   font-weight: 600; }
 
-ul, li {
-  list-style-type: none; }
-
 code {
   font-family: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono; }
 
@@ -115,3 +115,6 @@ body > footer {
   font-style: italic;
   font-size: 18px;
   color: #888888; }
+
+.content ol {
+  width: 666px; }

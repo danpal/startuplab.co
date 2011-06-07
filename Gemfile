@@ -9,8 +9,9 @@ gem 'haml-rails'
 gem 'haml'
 gem 'sass'
 gem 'RedCloth'
-gem 'toto-bongo'
+gem 'toto-bongo', '1.0.3'
 gem 'jquery-rails'
+gem 'rdiscount'
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'

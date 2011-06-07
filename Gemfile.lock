@@ -131,6 +131,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rdiscount (1.6.8)
     rest-client (1.6.1)
       mime-types (>= 1.16)
     ruby-openid (2.1.8)
@@ -139,7 +140,7 @@ GEM
     rubyntlm (0.1.1)
     sass (3.1.1)
     thor (0.14.6)
-    toto-bongo (1.0.2)
+    toto-bongo (1.0.3)
       RedCloth
       builder
       rack
@@ -162,5 +163,6 @@ DEPENDENCIES
   omniauth (~> 0.1.1)
   rails (= 3.0.3)
   rails3-generators
+  rdiscount
   sass
-  toto-bongo
+  toto-bongo (= 1.0.3)
