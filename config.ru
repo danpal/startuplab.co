@@ -26,6 +26,7 @@ toto_bongo = TotoBongo::Server.new do
   set :summary,   :max => 500
   set :root, 'index'
   set :prefix, 'blog'
+  set :disqus, 'startuplab'
 
   if RAILS_ENV != 'production'
     set :url, "http://localhost:3000/blog/"
